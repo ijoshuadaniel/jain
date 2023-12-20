@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoees</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Shoees</h1>
+
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#loginModal"
+      >
+        Login
+      </button>
+    </header>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#registerModal"
+              >
+                Register
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="registerModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Register</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Registration Form -->
+            <form id="registrationForm">
+              <div class="form-group">
+                <label for="username">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  required
+                />
+                <div class="error-message" id="nameError"></div>
+              </div>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  required
+                />
+                <div class="error-message" id="usernameError"></div>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  required
+                />
+                <div class="error-message" id="passwordError"></div>
+              </div>
+              <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider">
+      <div><img src="banner1.jpg" alt="Shoe 1" /></div>
+      <div><img src="banner2.jpg" alt="Shoe 2" /></div>
+      <div><img src="banner3.jpg" alt="Shoe 3" /></div>
+    </div>
+
+    <section id="services"></section>
+
+    <div class="gallery">
+      <h2>Gallery</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="shoe1.jpg"
+            alt="Shoe 1"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+        </div>
+        <div class="col-md-4">
+          <img
+            src="shoe2.jpg"
+            alt="Shoe 2"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+        </div>
+        <div class="col-md-4">
+          <img
+            src="shoe3.jpg"
+            alt="Shoe 3"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+        </div>
+        <div class="col-md-4">
+          <img
+            src="shoe4.jpg"
+            alt="Shoe 4"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+        </div>
+        <div class="col-md-4">
+          <img
+            src="shoe5.jpg"
+            alt="Shoe 5"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+        </div>
+        <div class="col-md-4">
+          <img
+            src="shoe6.jpg"
+            alt="Shoe 6"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img
+              src=""
+              class="img-fluid"
+              id="modalImage"
+              alt="Large Shoe Image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="about-us">
+      <h2>About Shoeee</h2>
+      <div class="about-us">
+        <img src="logo.jpg" alt="Shoeee Logo" />
+        <div class="about-us-info">
+          <p>
+            Welcome to Shoees, your go-to destination for trendy and comfortable
+            footwear. Established with a passion for style and quality, Shoees
+            is dedicated to providing you with the latest fashion in footwear.
+          </p>
+          <p>
+            At Shoees, we believe that the right pair of shoes can elevate your
+            confidence and complement your unique style. Whether you're looking
+            for casual sneakers, elegant heels, or durable athletic shoes, we've
+            got you covered.
+          </p>
+          <p>
+            Our commitment to quality extends beyond our products. We strive to
+            create a seamless and enjoyable shopping experience for our
+            customers. From user-friendly online browsing to prompt delivery, we
+            want your journey with Shoees to be exceptional.
+          </p>
+          <p>
+            Explore our diverse collection, carefully curated to suit various
+            tastes and preferences. We follow the latest trends in the fashion
+            industry to ensure that you stay ahead in style without compromising
+            on comfort.
+          </p>
+          <p>
+            Thank you for choosing Shoees. Step into fashion, step into comfort
+            – step into Shoees!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Shoees. All Rights Reserved.</p>
+      <a href="#" target="_blank"
+        ><img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png"
+          alt="Instagram"
+      /></a>
+      <a href="#" target="_blank"
+        ><img
+          src="https://static-00.iconduck.com/assets.00/facebook-icon-512x512-seb542ju.png"
+          alt="Facebook"
+      /></a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
